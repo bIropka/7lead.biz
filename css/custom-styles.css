@@ -25,6 +25,12 @@
     font-weight: 300;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SegoiUI Light';
+    src: url("../source/fonts/SegoeUILight.woff") format("woff"), url("../source/fonts/SegoeUILight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
 * {
     padding: 0;
     margin: 0;
@@ -745,6 +751,64 @@ article p {
 ******* contacts page *********
 ******************************/
 
+.on-map {
+    width: 575px;
+    height: 315px;
+    float: left;
+    margin-right: 20px;
+}
+.contacts-data a, .contacts-data div {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 60px;
+    font-family: 'SegoiUI Light', sans-serif;
+    font-size: 18px;
+    color: #010101;
+    position: relative;
+}
+.contacts-data a:before, .contacts-data div:before {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    background: transparent url('../source/images/sprite-contacts.png') no-repeat;
+    background-size: cover;
+    left: 10px;
+}
+.contacts-data .phone {
+    margin-top: 5px;
+}
+.contacts-data .phone:before {
+    top: -7px;
+}
+.contacts-data .email {
+    margin: 35px 0 60px;
+}
+.contacts-data .email:before {
+    top: -5px;
+    background-position: -35px center;
+}
+.contacts-data .address {
+    margin-bottom: 80px;
+}
+.contacts-data .address:before {
+    top: -5px;
+    background-position: -70px center;
+}
+.contacts-data .working-hours {
+
+}
+.contacts-data .working-hours:before {
+    width: 17px;
+    height: 17px;
+    background: transparent url('../source/images/icon-clock.png') no-repeat;
+    background-size: cover;
+    left: 20px;
+    top: 5px;
+}
+
 /******************************
 ******* media queries *********
 ******************************/
@@ -822,6 +886,13 @@ article p {
     }
     .advertisers ul li {
         width: 50%;
+    }
+    .page-contacts .on-map {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+    .page-contacts .contacts-data a, .contacts-data div {
+        margin: 15px 15px 15px 15px!important;
     }
 }
 
