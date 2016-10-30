@@ -84,6 +84,20 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 35px;
 }
+.h1-other {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: #000000;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+.h1-other:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #1571bc;
+    margin-bottom: 40px;
+}
 h2 {
     font-family: 'Bender', sans-serif;
     font-size: 2.142857142857143em;
@@ -115,7 +129,7 @@ img {
 }
 
 .wrapper {
-    min-height: 100%;
+    min-height: 88vh;
     position: relative;
     overflow: hidden;
 }
@@ -124,9 +138,12 @@ img {
     display: block;
     width: 100%;
     max-width: 980px;
-    padding: 50px 10px 85px;
+    padding: 30px 10px 60px;
     position: relative;
     margin: 0 auto;
+}
+.page-main .wrapper {
+    padding: 50px 10px 85px;
 }
 .wrapper-inner:after {
     content: '';
@@ -135,7 +152,7 @@ img {
 }
 
 /******************************
-*********** header ************
+******** header-main **********
 ******************************/
 header[role="banner"] .wrapper-inner {
     padding: 18px 10px;
@@ -182,6 +199,22 @@ nav ul li a:hover, .sign a:hover {
 section {
     display: block;
 }
+/******************************
+****** header-others **********
+******************************/
+.logo-small {
+    display: block;
+    width: 225px;
+    float: left;
+}
+.header-others nav, .header-others .sign {
+    display: inline-block;
+    float: none;
+}
+.header-right {
+    text-align: right;
+}
+
 /******************************
 ********** footer *************
 ******************************/
@@ -695,6 +728,24 @@ footer[role='contentinfo'] > div, .contacts div {
 }
 
 /******************************
+******* for-dev page **********
+******************************/
+article p {
+    font-family: 'Roboto Light', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 35px;
+    margin-bottom: 35px;
+}
+/******************************
+********* news page ***********
+******************************/
+
+/******************************
+******* contacts page *********
+******************************/
+
+/******************************
 ******* media queries *********
 ******************************/
 
@@ -719,6 +770,10 @@ footer[role='contentinfo'] > div, .contacts div {
 }
 
 @media (max-width: 980px) {
+
+    header[role="banner"].header-others .wrapper-inner {
+        padding: 0 10px;
+    }
     .burger {
         display: block;
         width: 30px;
@@ -727,6 +782,24 @@ footer[role='contentinfo'] > div, .contacts div {
         background-size: cover;
         margin-top: 6px;
     }
+    .logo-small {
+        height: 33px;
+        width: auto;
+        margin: 10px 0 15px;
+    }
+    .logo-small img {
+        height: 100%;
+        width: auto;
+    }
+    .header-others .burger {
+        display: inline-block;
+        margin-top: 25px;
+    }
+    .header-others .sign {
+        top: 15px;
+        right: 60px;
+    }
+
     nav ul {
         display: none;
         padding-top: 15px;
@@ -807,6 +880,20 @@ footer[role='contentinfo'] > div, .contacts div {
     .slider .slick-next {
         right: 20px;
     }
+    .header-others .sign a {
+        font-size: 0.9em;
+        line-height: 25px;
+        margin-left: 10px;
+    }
+    .header-others .sign {
+        top: 20px;
+        right: 50px;
+    }
+    .header-others .sign-in:before {
+        width: 25px;
+        height: 25px;
+        background-size: cover;
+    }
 }
 
 @media (max-width: 360px) {
@@ -821,6 +908,23 @@ footer[role='contentinfo'] > div, .contacts div {
     }
     .top-offers td .indicator span {
         line-height: 25px;
+    }
+    header[role="banner"].header-others .wrapper-inner {
+        padding: 0 10px 10px;
+    }
+    .logo-small {
+        margin-bottom: 40px;
+    }
+    .header-others .sign {
+        top: 55px;
+        right: auto;
+        left: 0;
+    }
+    .header-others .burger {
+        margin-top: 40px;
+    }
+    .to-register a {
+        padding: 15px 40px;
     }
 
 }
